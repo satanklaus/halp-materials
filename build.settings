@@ -1,0 +1,60 @@
+--
+-- For more information on build.settings see the Corona SDK Build Guide at:
+-- http://docs.coronalabs.com/guide/distribution/buildSettings/index.html
+--
+
+settings =
+{
+	orientation =
+	{
+		-- Supported values for orientation:
+		-- portrait, portraitUpsideDown, landscapeLeft, landscapeRight
+		default = "portrait",
+		supported = { "portrait", },
+	},
+
+	--
+	-- Android section
+	--
+	android =
+	{
+		usesPermissions =
+		{
+			"android.permission.INTERNET",
+		},
+	},
+
+	--
+	-- iOS section
+	--
+	iphone =
+	{
+		xcassets = "Images.xcassets",
+		plist =
+		{
+			UIStatusBarHidden = false,
+			UILaunchStoryboardName = "LaunchScreen",
+		},
+	},
+
+	win32 = {
+		singleInstance = true;
+		preferenceStorage = "registry",
+	},
+	window = {
+		defaultMode = "normal",
+		defaultViewWidth = 640,
+		defaultViewHeight = 480,
+		resizable = false,
+		enableCloseButton = true;
+		enableMinimizeButton = false,
+		enableMaximizeButton = false,
+		titleText = {default = ""},
+	},
+	plugins = {
+		["plugin.nanosvg"] = {publisherId = "com.coronalabs"},
+		["plugin.utf8"] = { publisherId = "com.coronalabs" },
+		["plugin.openssl"] = { publisherId = "com.coronalabs" },
+	}
+
+}
